@@ -1,0 +1,17 @@
+{
+  "app": {
+    "name": "Socket Chat",
+    "version": "1.0.0",
+    "description": "Чат в реальному часі з використанням Socket.IO"
+  },
+  "server": {
+    "port": 3000,
+    "hostname": "localhost"
+  },
+  "chat": {
+    "maxMessageLength": 500,
+    "maxUsernameLength": 20,
+    "minUsernameLength": 2,
+    "typingTimeout": 1000
+  }
+}
