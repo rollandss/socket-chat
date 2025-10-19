@@ -15,10 +15,14 @@ app.prepare().then(() => {
 
   const io = new Server(httpServer, {
     cors: {
-      origin:
-        process.env.NODE_ENV === 'production'
-          ? process.env.FRONTEND_URL || false
-          : '*',
+      origin: (() => {
+        if (process.env.NODE_ENV !== 'production') return '*';
+        const f = process.env.FRONTEND_URL;
+        if (!f) return false;
+        // Allow comma-separated list of origins
+        const list = f.split(',').map((s) => s.trim()).filter(Boolean);
+        return list.length === 1 ? list[0] : list;
+      })(),
       methods: ['GET', 'POST'],
     },
   });
