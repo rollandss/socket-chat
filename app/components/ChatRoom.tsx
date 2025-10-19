@@ -153,7 +153,9 @@ export default function ChatRoom() {
             <h1 className='text-3xl font-bold text-gray-800 mb-2'>
               💬 Socket Chat
             </h1>
-            <p className='text-gray-600'>Введіть ваше ім'я для входу в чат</p>
+            <p className='text-gray-600'>
+              Введіть ваше ім&#39;я для входу в чат
+            </p>
           </div>
 
           <form onSubmit={joinChat} className='space-y-4'>
@@ -162,7 +164,7 @@ export default function ChatRoom() {
                 htmlFor='username'
                 className='block text-sm font-medium text-gray-700 mb-2'
               >
-                Ім'я користувача
+                Ім&#39;я користувача
               </label>
               <input
                 type='text'
@@ -170,7 +172,7 @@ export default function ChatRoom() {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors'
-                placeholder="Введіть ваше ім'я..."
+                placeholder='Введіть ваше ім&#39;я...'
                 required
                 minLength={2}
                 maxLength={20}

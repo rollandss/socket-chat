@@ -1,11 +1,1 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
-  experimental: {
-    serverActions: {
-      allowedOrigins: ['localhost:3000'],
-    },
-  },
-};
-
-export default nextConfig;
+// Placeholder to be removed. Use next.config.js instead.
